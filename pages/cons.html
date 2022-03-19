@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contitions...</title>
+        <link rel="stylesheet" type="text/css"  href="../style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.61.0/lib/codemirror.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/codemirror@5.61.0/lib/codemirror.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/codemirror@5.61.0/mode/python/python.min.js"></script>
+    </head>
+    <body>
+        <h1> Conditions Page</h1>
+        <br>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+          </ul>
+        </nav>
+        <br><br><br>
+        <h3> Python Example - Contitions </h3>
+        <pre>
+            <code id="python_code">
+              a = 1
+              b = 2
+
+              if a == b:
+                print('Equals')
+              else:
+                print('Not Equals')
+            </code>
+        </pre>
+
+        <script type="text/javascript">
+            window.onload = function(){
+                var codeElement = document.getElementById('python_code');
+                var code = codeElement.innerText;
+              
+                codeElement.innerHTML = "";
+              
+                var codeMirror = CodeMirror(
+                  codeElement,
+                  {
+                    value: code,
+                    mode: "python",
+                    theme: "default",
+                    lineNumbers: false,
+                    readOnly: true
+                  }
+                );
+            };
+        </script>
+    </body>
+</html>
